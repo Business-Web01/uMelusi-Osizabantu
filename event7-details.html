@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details | uMelusi Osizabantu</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    background-color: #f0f0f0; 
+}
+
+header {
+    background-color: #333;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    width: 280px;
+    height: 100px;
+}
+
+nav {
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+
+.event-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    flex: 1; 
+    text-align: center;
+}
+
+.event-details .event-content {
+    background-color: #d3d3d3; 
+    padding: 40px; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+}
+
+.event-details .event-content h1 {
+    font-size: 2em;
+}
+
+.event-details .event-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.event-details .event-content #event-image {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.event-details .event-content #event-description {
+    margin-bottom: 20px;
+}
+
+.event-details .event-content .btn {
+    background-color: #ff0000;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.event-details .event-content .btn:hover {
+    background-color: #a5a7a8;
+}
+
+
+.site-footer {
+    background-color: #000; 
+    color: #fff; 
+    text-align: center;
+    padding: 1px;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .site-footer a.social-link {
+    color: #fff;
+    margin-left: 8px;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  .site-footer a.facebook-link:hover {
+    color: #1877f2; 
+  }
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+    </style>
+    
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="Umelusi Logo.jpg" alt="uMuzi Osizabantu Logo">
+        </div>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="program.html">Programs</a>
+            <a href="get-involved.html">Get Involved</a>
+            <a href="events.html">Events</a>
+            <a href="statistics.html">Statistics</a>
+            <a href="stakeholder.html">Stakeholders</a>
+            <a href="team.html">Team</a>
+    </nav>
+
+    </header>
+
+    <section class="event-details">
+        <div class="event-content">
+            <h1 id="event-title">Soup Kitchen Event</h1>
+            <img id="event-image" src="soup kitchen.jpg" alt="Youth Event">
+            <p><strong>Date:</strong> <span id="event-date">July 05, 2024</span></p>
+            <p><strong>Time:</strong> <span id="event-time"> 13:00</span></p>
+            <p><strong>Location:</strong> <span id="event-location">UMTHOMBO KA JAKOBE CHURCH</span></p>
+            <p id="event-description">
+                The community soup kitchen initiative was organized to provide nutritious meals to individuals and families in need within the local area. Volunteers gathered at a central location where fresh ingredients were donated by local businesses, and the cooking process began early in the morning. The kitchen was set up to prepare large quantities of soup, focusing on wholesome, hearty meals that could nourish the community. Throughout the day, volunteers worked together to chop vegetables, prepare the broth, and serve the hot meals to those who lined up for food. The event not only provided a much-needed meal but also served as a moment of connection for neighbors to come together.
+
+The soup kitchen initiative was more than just about providing food; it also created a sense of solidarity and community spirit. Local residents, regardless of their backgrounds, participated in various ways, whether through donating ingredients, volunteering their time, or simply showing up to share a meal. The event was held regularly, ensuring that those struggling with food insecurity had a dependable source of support. It was a heartwarming reminder of how collective efforts can have a meaningful impact, bringing people together and fostering a caring, supportive environment.</p>
+
+            <p>The event will focus on key topics such as the reintegration of ex-convicts, emphasizing the importance
+                of second chances and support systems in helping former offenders rebuild their lives. Discussions on 
+                the value of education, crime prevention, and the dangers of substance abuse will highlight the risks 
+                young people face and how they can safeguard their futures. Additionally, we will explore the power of 
+                entrepreneurship, encouraging youth to pursue self-sufficiency and economic independence. Through motivational
+                talks and interactive sessions, we will also stress the importance of using one’s gifts and talents to 
+                create opportunities and inspire change.</p>
+
+            <p>We believe that by fostering these conversations and providing valuable resources, we can empower young people
+                to take charge of their futures with confidence. This Youth Month celebration is more than just an event—it 
+                is a call to action for the youth of Vosloorus to rise above challenges and embrace their potential. 
+                We look forward to seeing the impact of this initiative as we continue to support and uplift our young 
+                leaders of tomorrow.</p>
+
+            <a href="events.html" class="btn">Back to Events</a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <p>Designed by Mbali Mahlangu</p>
+        <p>Follow us on 
+            <a href="https://www.facebook.com/share/1AX8tBxcDv/" target="_blank" class="social-link facebook-link">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+        </p>
+        <p>&copy; 2025 uMelusi Osizabantu. All Rights Reserved.</p>
+
+      </footer>
+
+</body>
+</html>
