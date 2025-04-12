@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | uMelusi Osizabantu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+header .logo img {
+    width: 280px;
+    height: 100px;
+}
+
+nav {
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+.events {
+    text-align: center;
+    padding: 50px;
+}
+
+.past-events {
+    background-color: #ddd;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.events h1 {
+    color: #f52424;
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+.event-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.event {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.event img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.event h3 {
+    margin-top: 10px;
+}
+
+.event p {
+    color: #777;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-top: 10px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: darkred;
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+.site-footer {
+    background-color: #000; 
+    color: #fff; 
+    text-align: center;
+    padding: 1px;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .site-footer a.social-link {
+    color: #fff;
+    margin-left: 8px;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  .site-footer a.facebook-link:hover {
+    color: #1877f2; 
+  }
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Umelusi Logo.jpg" alt="uMuzi Osizabantu Logo">
+        </div>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="program.html">Programs</a>
+            <a href="get-involved.html">Get Involved</a>
+            <a href="events.html">Events</a>
+            <a href="statistics.html">Statistics</a>
+            <a href="stakeholder.html">Stakeholders</a>
+            <a href="team.html">Team</a>
+    </nav>
+
+    </header>
+
+    
+    <section class="events">
+        <h1>Current Events</h1>
+        <div class="event-container">
+            <div class="event">
+                <img src="202event1.png" alt="Event 1">
+                <h3>Anti Bullying Campaign</h3>
+                <p>Date: January 30, 2025</p>
+                <a href="event1-details.html" class="btn">View Details</a>
+            </div>
+        </div>
+
+    </section>
+
+    
+    <section class="events past-events">
+        <h1>Previous Events</h1>
+        <div class="event-container">
+            <div class="event">
+                <img src="child.jpg" alt="Event 5">
+                <h3>Child Protection Week</h3>
+                <p>Date: June 4, 2024</p>
+                <a href="event5-details.html" class="btn">View Details</a>
+            </div>
+
+            <div class="event">
+                <img src="youth.jpg" alt="Event 6">
+                <h3>Youth Event</h3>
+                <p>Date: June 30, 2024</p>
+                <a href="event6-details.html" class="btn">View Details</a>
+            </div>
+
+            <div class="event">
+                <img src="soup kitchen.jpg" alt="Event 6">
+                <h3>Soup Kitchen Event</h3>
+                <p>Date: July 05, 2024</p>
+                <a href="event7-details.html" class="btn">View Details</a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <p>Designed by Mbali Mahlangu</p>
+        <p>Follow us on 
+            <a href="https://www.facebook.com/share/1AX8tBxcDv/" target="_blank" class="social-link facebook-link">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+        </p>
+        <p>&copy; 2025 uMelusi Osizabantu. All Rights Reserved.</p>
+
+      </footer>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+    const events = document.querySelectorAll(".event");
+
+    events.forEach(event => {
+        event.addEventListener("mouseover", function () {
+            this.style.transform = "scale(1.05)";
+            this.style.transition = "0.3s";
+        });
+
+        event.addEventListener("mouseleave", function () {
+            this.style.transform = "scale(1)";
+        });
+    });
+});
+        </script>
+</body>
+</html>
