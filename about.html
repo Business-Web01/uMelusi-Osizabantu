@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | uMelusi Osizabantu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #d41919, #6c6c6d);
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      background-color: #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      position: relative;
+    }
+
+    .menu-icon {
+      font-size: 28px;
+      cursor: pointer;
+      color: white;
+    }
+
+    header .logo img {
+    width: 280px;
+    height: 100px;
+}
+    .side-nav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.4s;
+      padding-top: 60px;
+    }
+
+    .side-nav a {
+      padding: 10px 30px;
+      text-decoration: none;
+      font-size: 18px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .side-nav a:hover {
+      background-color: #fd3232d4;
+    }
+
+    .side-nav .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      font-size: 36px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .ngo-info {
+      font-size: 18px;
+      margin-bottom: 30px;
+      padding: 0 20px;
+    }
+
+    .mission-vision {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      flex: 1;
+      min-width: 300px;
+      margin: 10px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .box:hover {
+      transform: scale(1.05);
+    }
+
+    h1, h2 {
+      margin-bottom: 10px;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .mission-vision {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .site-footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 1px;
+      font-family: 'Arial', sans-serif;
+      font-size: 16px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .site-footer a.social-link {
+      color: #fff;
+      margin-left: 8px;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    .site-footer a.facebook-link:hover {
+      color: #1877f2;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="menu-icon" onclick="openNav()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="logo">
+      <img src="Umelusi Logo.jpg" alt="uMelusi Osizabantu Logo">
+    </div>
+  </header>
+
+  <div id="sideNav" class="side-nav">
+    <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="program.html">Programs</a>
+    <a href="get-involved.html">Get Involved</a>
+    <a href="events.html">Events</a>
+    <a href="statistics.html">Statistics</a>
+    <a href="stakeholder.html">Stakeholders</a>
+    <a href="team.html">Team</a>
+  </div>
+
+  <div class="container">
+    <h1>What is the uMelusi Osizabantu all about?</h1>
+    <p class="ngo-info">
+      uMelusi Osizabantu was founded by Melusi Ngwenya, a Family Mediator, Relationship Coach, Counsellor, Motivational Speaker, and Spiritual Healer.
+    </p>
+
+    <p>The organization was established to lead communities towards a better lifestyle by transforming mindsets, providing counseling and motivation, reducing crime, and developing skills for youth, ex-offenders, and people living with disabilities.</p>
+
+    <p>uMelusi Osizabantu also offers educational and mentorship to empower individuals and foster growth. We provide Mediation (Learners, Parents and Educators), Counselling, Motivation and Developing Skills for youth, Ex-Offenders (Victim Offender Dialogues), Leadership (SGB, RCL, etc), and Anti-Bullying Workshops.</p>
+
+    <p>uMelusi Osizabantu is also part of the GDE Ekurhuleni South Social Cluster Safety Forum and Boksburg Community Corrections Forum.</p>
+
+    <div class="mission-vision">
+      <div class="box mission">
+        <h2>Our Mission</h2>
+        <p>Our mission is to empower individuals—men, women, youth, and children—by instilling confidence and helping them realize their potential, irrespective of their past circumstances. Through our programs, participants have stepped into leadership roles and transformed their lives.</p>
+        <p>uMelusi Osizabantu is a catalyst for change, tackling urgent issues affecting South African youth, including bullying, gangsterism, teenage pregnancy, gender-based violence (GBV), femicide, and mental health. Our awareness campaigns call upon teenagers, parents, teachers, policymakers, and community members to actively prevent and address these challenges.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>Designed by Mbali Mahlangu</p>
+    <p>Follow us on 
+      <a href="https://www.facebook.com/share/1AX8tBxcDv/" target="_blank" class="social-link facebook-link">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </p>
+    <p>&copy; 2025 uMelusi Osizabantu. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function openNav() {
+      document.getElementById("sideNav").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("sideNav").style.width = "0";
+    }
+  </script>
+</body>
+</html>

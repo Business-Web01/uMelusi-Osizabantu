@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home | uMelusi Osizabantu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #000;
+      color: white;
+      padding: 15px 20px;
+      position: relative;
+      z-index: 1001;
+    }
+
+    .menu-icon {
+      font-size: 28px;
+      cursor: pointer;
+      color: white;
+    }
+
+    .side-nav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.4s;
+      padding-top: 60px;
+    }
+
+    .side-nav a {
+      padding: 10px 30px;
+      text-decoration: none;
+      font-size: 18px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .side-nav a:hover {
+      background-color: #fd3232d4;
+    }
+
+    .side-nav .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      font-size: 36px;
+    }
+
+    header .logo img {
+    width: 280px;
+    height: 100px;
+}
+
+    .hero {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding-right: 50px;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url('homepage.jpg');
+      background-size: cover;
+      background-position: center;
+      filter: blur(9px);
+      z-index: -1;
+    }
+
+    .hero-text {
+      color: white;
+      text-align: right;
+    }
+
+    .hero-text h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+
+    .hero-text button {
+      background-color: #df1b05;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .hero-text button a {
+      color: rgb(5, 5, 5);
+      text-decoration: none;
+    }
+
+    .site-footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 1px;
+      font-family: 'Arial', sans-serif;
+      font-size: 16px;
+    }
+
+    .site-footer a.social-link {
+      color: #fff;
+      margin-left: 8px;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    .site-footer a.facebook-link:hover {
+      color: #1877f2;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="menu-icon" onclick="openNav()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="logo">
+      <img src="Umelusi Logo.jpg" alt="uMelusi Osizabantu Logo">
+    </div>
+  </header>
+
+  <div id="sideNav" class="side-nav">
+    <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="program.html">Programs</a>
+    <a href="get-involved.html">Get Involved</a>
+    <a href="events.html">Events</a>
+    <a href="statistics.html">Statistics</a>
+    <a href="stakeholder.html">Stakeholders</a>
+    <a href="team.html">Team</a>
+  </div>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Welcome to uMelusi Osizabantu</h1>
+      <p>Empowering communities through compassion and action.</p>
+      <button><a href="get-involved.html">Get Involved</a></button>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>Designed by Mbali Mahlangu</p>
+    <p>Follow us on 
+      <a href="https://www.facebook.com/share/1AX8tBxcDv/" target="_blank" class="social-link facebook-link">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </p>
+    <p>&copy; 2025 uMelusi Osizabantu. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+     function openNav() {
+      document.getElementById("sideNav").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("sideNav").style.width = "0";
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

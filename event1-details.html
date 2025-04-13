@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details | uMelusi Osizabantu</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    background-color: #f0f0f0; 
+}
+
+header {
+    background-color: #333;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    width: 280px;
+    height: 100px;
+}
+.menu-icon {
+      font-size: 28px;
+      cursor: pointer;
+      color: white;
+    }
+
+    .side-nav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.4s;
+      padding-top: 60px;
+    }
+
+    .side-nav a {
+      padding: 10px 30px;
+      text-decoration: none;
+      font-size: 18px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .side-nav a:hover {
+      background-color: #fd3232d4;
+    }
+
+    .side-nav .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      font-size: 36px;
+    }
+
+
+nav {
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: #fbfbfc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+
+.event-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    flex: 1; 
+    text-align: center;
+}
+
+.event-details .event-content {
+    background-color: #d3d3d3; 
+    padding: 40px; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+}
+
+.event-details .event-content h1 {
+    font-size: 2em;
+}
+
+.event-details .event-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.event-details .event-content #event-image {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.event-details .event-content #event-description {
+    margin-bottom: 20px;
+}
+
+.event-details .event-content .btn {
+    background-color: #ff0000;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.event-details .event-content .btn:hover {
+    background-color: #a5a7a8;
+}
+
+.site-footer {
+    background-color: #000; 
+    color: #fff; 
+    text-align: center;
+    padding: 1px;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .site-footer a.social-link {
+    color: #fff;
+    margin-left: 8px;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  .site-footer a.facebook-link:hover {
+    color: #1877f2; 
+  }
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="menu-icon" onclick="openNav()">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="logo">
+          <img src="Umelusi Logo.jpg" alt="uMelusi Osizabantu Logo">
+        </div>
+      </header>
+    
+      <div id="sideNav" class="side-nav">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="program.html">Programs</a>
+        <a href="get-involved.html">Get Involved</a>
+        <a href="events.html">Events</a>
+        <a href="statistics.html">Statistics</a>
+        <a href="stakeholder.html">Stakeholders</a>
+        <a href="team.html">Team</a>
+      </div>
+      
+    <section class="event-details">
+        <div class="event-content">
+            <h1 id="event-title">Anti Bullying Campaign</h1>
+            <img id="event-image" src="202event1.png" alt="Community Fundraiser">
+            <p><strong>Date:</strong> <span id="event-date">January 30, 2025</span></p>
+            <p><strong>Location:</strong> <span id="event-location">Izibuko Primary School</span></p>
+            <p id="event-description">
+                In addition to the theater play, we facilitated open discussions where 
+                students could share their thoughts, experiences, and concerns regarding 
+                bullying and teenage pregnancy. Educators and community leaders also participated,
+                providing valuable insights and guidance on how young learners can protect themselves
+                and support one another. By fostering a safe and interactive environment, we encouraged
+                students to ask questions and engage in meaningful conversations, ensuring they 
+                felt heard and empowered.</p>
+
+            <p>This initiative is just the beginning of our commitment to creating a positive impact
+                 in schools across Katlehong. We plan to expand our outreach to more schools, 
+                 incorporating workshops, mentorship programs, and continued theatrical performances 
+                 to reinforce these important messages. By collaborating with educators, parents, 
+                 and community members, we aim to build a culture of awareness, respect, and responsibility
+                  among young learners, equipping them with the knowledge and confidence to navigate life’s 
+                  challenges successfully.</p>
+
+            <a href="events.html" class="btn">Back to Events</a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <p>Designed by Mbali Mahlangu</p>
+        <p>Follow us on 
+            <a href="https://www.facebook.com/share/1AX8tBxcDv/" target="_blank" class="social-link facebook-link">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+        </p>
+        <p>&copy; 2025 uMelusi Osizabantu. All Rights Reserved.</p>
+      </footer>
+
+      <script>
+        
+    function openNav() {
+      document.getElementById("sideNav").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("sideNav").style.width = "0";
+    }
+  
+      </script>
+</body>
+</html>

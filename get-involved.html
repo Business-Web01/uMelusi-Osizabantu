@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Get Involved | uMelusi Osizabantu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 30px;
+      background-color: #333;
+      color: white;
+    }
+
+    header .logo img {
+      width: 220px;
+      height: auto;
+    }
+    .menu-icon {
+      font-size: 28px;
+      cursor: pointer;
+      color: white;
+    }
+    .side-nav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.4s;
+      padding-top: 60px;
+    }
+
+    .side-nav a {
+      padding: 10px 30px;
+      text-decoration: none;
+      font-size: 18px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .side-nav a:hover {
+      background-color: #fd3232d4;
+    }
+
+    .side-nav .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      font-size: 36px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      padding: 50px 20px;
+    }
+
+    .form-container, .map-container {
+      flex: 1 1 450px;
+      background-color: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .form-container {
+      background-color: #ff3131;
+      color: white;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 26px;
+      color: white;
+    }
+
+    .form-field {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 15px;
+      color: white;
+    }
+
+    input[type="text"], textarea, select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      font-size: 16px;
+      outline: none;
+    }
+
+    textarea {
+      height: 100px;
+      resize: vertical;
+    }
+
+    button {
+      background-color: green;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: darkgreen;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 400px;
+      border: 0;
+      border-radius: 12px;
+    }
+
+    .site-footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      font-family: 'Arial', sans-serif;
+      font-size: 16px;
+    }
+
+    .site-footer a.social-link {
+      color: #fff;
+      margin-left: 8px;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    .site-footer a.facebook-link:hover {
+      color: #1877f2;
+    }
+
+    @media (max-width: 768px) {
+      .form-container, .map-container {
+        padding: 20px;
+      }
+    }
+    @keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.form-container {
+  animation: slideInLeft 1s ease-out forwards;
+  opacity: 0;
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="menu-icon" onclick="openNav()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <div class="logo">
+      <img src="Umelusi Logo.jpg" alt="uMelusi Osizabantu Logo">
+    </div>
+  </header>
+
+  <div id="sideNav" class="side-nav">
+    <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="program.html">Programs</a>
+    <a href="get-involved.html">Get Involved</a>
+    <a href="events.html">Events</a>
+    <a href="statistics.html">Statistics</a>
+    <a href="stakeholder.html">Stakeholders</a>
+    <a href="team.html">Team</a>
+  </div>
+
+  <div class="container">
+    <div class="form-container">
+      <h2>Get In Touch</h2>
+      <form id="contact-form">
+        <div class="form-field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-field">
+          <label for="surname">Surname</label>
+          <input type="text" id="surname" name="surname" required>
+        </div>
+        <div class="form-field">
+          <label for="cellphone">Cellphone Number</label>
+          <input type="text" id="cellphone" name="cellphone" required>
+        </div>  
+        <div class="form-field">
+          <label for="email">Email Address</label>
+          <input type="text" id="email" name="email" required>
+        </div>
+        <div class="form-field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <div class="form-field">
+          <label for="source">How did you hear about us?</label>
+          <select id="source" name="source" required>
+            <option value="">Select an option</option>
+            <option value="TikTok">TikTok</option>
+            <option value="Instagram">Instagram</option>
+            <option value="School Campaign">School Visit</option>
+            <option value="Word of Mouth">Word of Mouth</option>
+            <option value="Facebook">Facebook</option>
+            <option value="Website">Website</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <button type="submit" id="send-button">Send</button>
+      </form>
+    </div>
+
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3574.8520814018793!2d28.206904574661344!3d-26.363645876978758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e951e9e7c51ac3f%3A0x2490483a5720eab0!2s5416%20Roets%20Dr%2C%20Vosloorus%20Ext%202%2C%20Vosloorus%2C%201486!5e0!3m2!1sen!2sza!4v1743685428365!5m2!1sen!2sza" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>Designed by Mbali Mahlangu</p>
+    <p>Follow us on 
+        <a href="https://www.facebook.com/share/1AX8tBxcDv/" target="_blank" class="social-link facebook-link">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+    </p>
+    <p>&copy; 2025 uMelusi Osizabantu. All Rights Reserved.</p>
+
+  </footer>
+
+  <script>
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      let name = document.getElementById("name").value;
+      let surname = document.getElementById("surname").value;
+      let cellphone = document.getElementById("cellphone").value;
+      let email = document.getElementById("email").value;
+      let message = document.getElementById("message").value;
+      let source = document.getElementById("source").value;
+
+      let intro = `Dear uMelusi Osizabantu Team,\n\nYou have received a new message from your website contact form.\n\n`;
+      let body = `${intro}Name: ${name} ${surname}\nCellphone: ${cellphone}\nEmail: ${email}\nHow did you hear about us: ${source}\n\nMessage:\n${message}`;
+      
+      let mailtoLink = `mailto:umelusiosizabantu@gmail.com?subject=New Contact Form Submission&body=${encodeURIComponent(body)}`;
+      window.location.href = mailtoLink;
+
+      setTimeout(function() {
+        window.location.href = "index.html";
+      }, 2000);
+    });
+
+    
+    function openNav() {
+      document.getElementById("sideNav").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("sideNav").style.width = "0";
+    }
+  
+  </script>
+
+</body>
+</html>
