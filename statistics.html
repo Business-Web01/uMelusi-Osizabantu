@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics | uMelusi Osizabantu</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+        header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #080808;
+    color: white;
+}
+
+header .logo img {
+    width: 280px;
+    height: 100px;
+}
+
+.menu-icon {
+      font-size: 28px;
+      cursor: pointer;
+      color: white;
+    }
+
+    .side-nav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.4s;
+      padding-top: 60px;
+    }
+
+    .side-nav a {
+      padding: 10px 30px;
+      text-decoration: none;
+      font-size: 18px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .side-nav a:hover {
+      background-color: #fd3232d4;
+    }
+
+    .side-nav .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      font-size: 36px;
+    }
+
+    .site-footer {
+        background-color: #000; 
+        color: #fff; 
+        text-align: center;
+        padding: 20px 10px;
+        font-family: 'Arial', sans-serif;
+        font-size: 16px;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+      }
+      
+      .site-footer a.social-link {
+        color: #fff;
+        margin-left: 8px;
+        font-size: 20px;
+        text-decoration: none;
+      }
+      .site-footer a.facebook-link:hover {
+        color: #1877f2; 
+      }    
+
+nav {
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+.container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+canvas {
+    margin-top: 30px;
+    border: 1px solid #ddd;
+}
+.site-footer {
+    background-color: #d8d5d5;
+    color: #050505; 
+    text-align: center;
+    padding: 20px 10px;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .site-footer a.social-link {
+    color: #fff;
+    margin-left: 8px;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  .site-footer a.facebook-link:hover {
+    color: #055fd4; 
+  }
+    </style>
+    
+</head>
+<body>
+
+    <header>
+        <div class="menu-icon" onclick="openNav()">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="logo">
+          <img src="Umelusi Logo.jpg" alt="uMelusi Osizabantu Logo">
+        </div>
+      </header>
+    
+      <div id="sideNav" class="side-nav">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="program.html">Programs</a>
+        <a href="get-involved.html">Get Involved</a>
+        <a href="events.html">Events</a>
+        <a href="statistics.html">Statistics</a>
+        <a href="stakeholder.html">Stakeholders</a>
+        <a href="team.html">Team</a>
+      </div>
+    
+
+    <div class="container">
+        <h1>Mental Health Statistics Among Grade 11 and 12 Learners</h1>
+        <canvas id="myChart" width="400" height="200"></canvas>
+    </div>
+
+    <footer class="site-footer">
+        <p>Designed by Mbali Mahlangu</p>
+        <p>Follow us on 
+            <a href="https://www.facebook.com/share/1AX8tBxcDv/" target="_blank" class="social-link facebook-link">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+        </p>
+        <p>&copy; 2025 uMelusi Osizabantu. All Rights Reserved.</p>
+
+      </footer>
+
+      <script>
+        const ctx = document.getElementById('myChart').getContext('2d');
+
+const data = {
+    labels: ['Anxiety (Males)', 'Anxiety (Females)', 'Depression (Males)', 'Depression (Females)', 'High Risk', 'Self-Harm', 'Mood Disorders'],
+    datasets: [{
+        label: 'Percentage (%)',
+        data: [52.9, 58.8, 18.3, 14.9, 14.9, 39.7, 29.9],
+        backgroundColor: ['red', 'black', 'red', 'black', 'red', 'black', 'red'],
+        borderColor: ['darkred', 'darkblack', 'darkred', 'darkblack', 'darkred', 'darkblack', 'darkred'],
+        borderWidth: 1
+    }]
+};
+
+
+const config = {
+    type: 'bar',
+    data: data,
+    options: {
+        responsive: true,
+        animation: {
+            duration: 2000, 
+            easing: 'easeOutBounce', 
+            onComplete: function() {
+                console.log('Animation completed!');
+            }
+        },
+        scales: {
+            y: {
+                beginAtZero: true,
+                max: 70 
+            }
+        }
+    }
+};
+
+
+const myChart = new Chart(ctx, config);
+
+function openNav() {
+      document.getElementById("sideNav").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("sideNav").style.width = "0";
+    }
+  
+
+      </script>
+      
+</body>
+</html>
